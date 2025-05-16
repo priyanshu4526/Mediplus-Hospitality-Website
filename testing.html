@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #f8f8f8;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .hero {
+            background: #007bff;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .appointment-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .appointment-form, .working-hours {
+            width: 48%;
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .appointment-form input,
+        .appointment-form textarea,
+        .appointment-form select,
+        .appointment-form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .appointment-form button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .working-hours {
+            background: #007bff;
+            color: white;
+        }
+
+        footer {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer .newsletter input {
+            width: 70%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        footer .newsletter button {
+            padding: 10px 20px;
+            background: white;
+            color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Mediplus</div>
+        <nav>
+            <a href="#">About Us</a>
+            <a href="#">Doctors</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Get Your Appointment</h1>
+    </section>
+
+    <div class="container">
+        <div class="appointment-section">
+            <div class="appointment-form">
+                <h2>Book Your Appointment</h2>
+
+
+                <form method="POST" action="/testing">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="phone" placeholder="Phone" required>
+                    <select name="department">
+                        <option value="">Select Department</option>
+                        <option value="dentist">Dentist</option>
+                        <option value="neurologist">Neurologist</option>
+                        <option value="gynaecologist">Gynaecologist</option>
+                    </select>
+                    <select name="doctor">
+                        <option value="">Select Doctor</option>
+                        <option value="dr_smith">Dr. Smith</option>
+                        <option value="dr_jones">Dr. Jones</option>
+                        <option value="dr_parag">Dr. Parag</option>
+                    </select>
+                    <input type="date" name="date" required>
+                    <textarea name="message" rows="4" placeholder="Write Your Message Here..."></textarea>
+                    <button type="submit">Book an Appointment</button>
+                </form>
+            </div>
+            <div class="working-hours">
+                <h2>Working Hours</h2>
+                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                <p>Saturday: 8:00 AM - 12:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>© Copyright 2024 | Mediplus</div>
+        <div class="newsletter">
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+    </footer>
+
+</body>
+</html>

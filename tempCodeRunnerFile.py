@@ -1,0 +1,1 @@
+ flash(f"An error occurred: {str(e)}", "danger")
